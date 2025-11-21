@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Request Visit - Bredi Nkz</title>
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('7A3E83B3-D68D-482B-B2C2-B2747FCCFCFF.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color:#333;
+  min-height:100vh;
+}
+
+.app { display:flex; flex-direction:column; min-height:100vh; backdrop-filter: blur(5px); }
+
+.topbar {
+  background: rgba(30,144,255,0.9); /* Dodger Blue */
+  color:white;
+  padding:12px 16px;
+  font-weight:bold;
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+  display:flex;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:12px;
+}
+.topbar a { color:white; text-decoration:none; font-weight:500; }
+
+.container { flex:1; display:flex; align-items:center; justify-content:center; padding:16px; }
+
+.card.form-card {
+  background: rgba(255,255,255,0.95);
+  border-radius:20px;
+  padding:24px 20px;
+  width:100%;
+  max-width:500px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  text-align:center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Fade in and move up animation */
+@keyframes fadeInUp {
+  0% { opacity:0; transform: translateY(20px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+form { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
+input, select, textarea {
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:16px;
+  transition:0.3s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color:#1E90FF;
+  box-shadow:0 0 8px rgba(30,144,255,0.3);
+  outline:none;
+}
+
+.btn {
+  padding:12px 20px;
+  border:none;
+  border-radius:12px;
+  background:#1E90FF;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+.btn:hover { background:#0d70d0; transform:scale(1.05); }
+
+.btn.ghost {
+  background:white;
+  border:2px solid #1E90FF;
+  color:#1E90FF;
+}
+.btn.ghost:hover {
+  background:#1E90FF;
+  color:white;
+  transform:scale(1.05);
+}
+
+.muted { color:#555; font-size:14px; }
+
+.bottom-nav {
+  display:flex;
+  justify-content:space-around;
+  background: rgba(255,255,255,0.95);
+  padding:10px 0;
+  box-shadow:0 -3px 6px rgba(0,0,0,0.2);
+  position:sticky;
+  bottom:0;
+  z-index:5;
+}
+.bottom-nav a {
+  color:#555;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+  flex:1;
+  transition:0.3s;
+}
+.bottom-nav a.active { color:#1E90FF; }
+.bottom-nav a:hover { color:#1E90FF; transform:scale(1.1); }
+
+label { font-weight:bold; margin-top:6px; text-align:left; display:block; }
+textarea { resize:none; }
+</style>
+</head>
+<body class="app">
+
+<header class="topbar small">
+  <div class="header-inner"><a href="index.html" class="small muted">← Home</a></div>
+</header>
+
+<main class="container">
+  <section class="card form-card">
+    <h3>Request Visit</h3>
+    <p class="muted">Fee: ₵120 via MTN MoMo to <strong>0548840144</strong>. Paste Txn ID below after payment.</p>
+    <form id="visitForm">
+      <label>Full Name*</label>
+      <input id="v_name" placeholder="Enter full name" required>
+
+      <label>Email or Phone*</label>
+      <input id="v_contact" placeholder="Enter email or phone" required>
+
+      <label>Select Purpose*</label>
+      <select id="v_purpose">
+        <option>Visit</option>
+        <option>Counseling</option>
+      </select>
+
+      <label>Preferred Day*</label>
+      <select id="v_day">
+        <option>Tuesday</option>
+        <option>Friday</option>
+        <option>Sunday</option>
+      </select>
+
+      <label>Purpose Details</label>
+      <textarea id="v_details" rows="3" placeholder="Optional details"></textarea>
+
+      <label>Number of People</label>
+      <input id="v_people" type="number" min="1" value="1">
+
+      <label>MoMo Sender Name / Txn ID*</label>
+      <input id="v_txn" placeholder="Enter Txn ID" required>
+
+      <div style="display:flex;gap:10px;margin-top:12px;">
+        <button type="submit" class="btn">Request Session</button>
+        <button type="button" id="openMomoGuide" class="btn ghost">How to Pay</button>
+      </div>
+    </form>
+    <div id="visitStatus" class="muted" style="margin-top:12px"></div>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <a href="index.html">Home</a>
+  <a href="community.html">Community</a>
+  <a href="request.html" class="active">Request</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
+</nav>
+
+</body>
+</html>

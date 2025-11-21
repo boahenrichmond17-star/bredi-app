@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="favicon.png" href="favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bredi Nkz – Kwagyei Kurom</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#caa32b">
+
+  <!-- Background styling inside HTML -->
+  <style>
+    /* 🌄 Full Page Background */
+    body {
+      background-image: url('images/image3.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+
+    /* 🌟 Topic Section Background */
+    .hero-bg {
+      background-image: url('images/WhatsApp Image 2025-11-13 at 12.07.24 AM (1).jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px 20px;
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+      text-shadow: 1px 1px 3px black;
+      margin-bottom: 20px;
+    }
+
+
+    /* Tile images */
+    .tile {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      border-radius: 10px;
+      padding: 20px;
+      display: block;
+    }
+  </style>
+
+  <script type="module" src="script.js" defer></script>
+</head>
+
+<body class="app">
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="header-inner">
+      <img src="images/1st icon.jpeg" alt="App Logo" class="icon" id="logoIcon">
+      <div>
+        <div class="title">Bredi Nkz</div>
+        <div class="subtitle">Kwagyei Kurom </div>
+      </div>
+      <div style="margin-left:auto;">
+        <a href="login.html" class="small muted">Login</a>
+        <a href="signup.html" class="small muted" style="margin-left:10px">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 🌄 HERO WITH TOPIC BACKGROUND -->
+    <section class="hero-bg">
+      <h1>Experience Bredi Nkz – Kwagyei Kurom</h1>
+      <p>Preserving culture • Sharing stories • Honouring our elders</p>
+
+      <a class="btn" href="comunity.html" style="margin-top:15px; display:inline-block;">Explore Community</a>
+    </section>
+
+    <!-- 🔥 COLORFUL TILES WITH IMAGES -->
+    <section class="card small-grid">
+      <a class="tile" href="community.html" style="background-image:url('images/219.JPG')">
+        <strong>Community Feed</strong><br>
+        <span>Photos & short videos</span>
+      </a>
+
+      <a class="tile" href="request.html" style="background-image:url('images/request.jpeg')">
+        <strong>Request Visit</strong><br>
+        <span>Visit & counseling</span>
+      </a>
+
+      <a class="tile" href="about.html" style="background-image:url('images/about.jpeg')">
+        <strong>About</strong><br>
+        <span>History & tourist spots</span>
+      </a>
+
+      <a class="tile" href="contact.html" style="background-image:url('images/contact.jpeg')">
+        <strong>Contact</strong><br>
+        <span>Maps & MoMo</span>
+      </a>
+    </section>
+
+    <!-- 📣 ANNOUNCEMENTS -->
+    <section class="card">
+      <h3>Announcements</h3>
+      <ul id="annList" class="muted">
+        <li>Welcome — Bredi community app launched by Brah_Richie.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- NAV -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="community.html">Community</a>
+    <a href="request.html">Request</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+<hr> <!-- optional, just to separate old content -->
+
+<h2>Upload a Video</h2>
+
+<input type="file" id="fileInput" accept="video/*" />
+<button id="uploadBtn">Upload Video</button>
+<p id="status"></p>
+
+<script type="module">
+  import { uploadFile } from './script.js';
+
+  const fileInput = document.getElementById('fileInput');
+  const uploadBtn = document.getElementById('uploadBtn');
+  const status = document.getElementById('status');
+
+  uploadBtn.addEventListener('click', async () => {
+    const file = fileInput.files[0];
+    if (!file) {
+      status.textContent = 'Please select a video first.';
+      return;
+    }
+
+    status.textContent = 'Uploading...';
+    const url = await uploadFile(file);
+    if (url) {
+      status.innerHTML = `Upload successful! <a href="${url}" target="_blank">View Video</a>`;
+    } else {
+      status.textContent = 'Upload failed.';
+    }
+  });
+</script>
+</body>
+</html>

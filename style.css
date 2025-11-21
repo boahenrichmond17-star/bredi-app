@@ -1,0 +1,71 @@
+/* (Full CSS — paste exactly, same as the colorful version I sent earlier) */
+:root{--green:#2f6b3f;--red:#b22222;--gold:#caa32b;--deep:#6b3f24;--bg:#fff8ef;--card:#fff;--muted:#6b5a52;--accent-2:#f05a28}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,system-ui,Arial;color:#222;background:linear-gradient(180deg,#fff8ef 0%,#fffdf9 100%);-webkit-font-smoothing:antialiased}
+.topbar{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:12px 14px;background:linear-gradient(90deg,rgba(202,163,43,0.12),rgba(47,107,63,0.03));border-bottom:1px solid rgba(0,0,0,0.06)}
+.header-inner{display:flex;gap:12px;align-items:center}.logo{background:linear-gradient(90deg,var(--gold),#fff);color:var(--deep);padding:6px 10px;border-radius:10px;font-weight:800;border:2px solid rgba(0,0,0,0.06);display:inline-flex;align-items:center;gap:8px}
+.icon{width:48px;height:48px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}.title{font-weight:800;font-size:18px}.subtitle{font-size:12px;color:var(--muted)}
+.container{max-width:980px;margin:12px auto;padding:12px}.card{background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 10px 30px rgba(107,63,36,0.06);border:1px solid rgba(11,11,11,0.02)}
+.hero .hero-media{height:220px;border-radius:10px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:12px;position:relative;overflow:hidden}.hero .hero-media::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(180deg,rgba(0,0,0,0.14) 0%, rgba(0,0,0,0.0) 40%)}
+.hero h1{margin:12px 0 6px;font-size:20px;color:var(--deep)}.muted{color:var(--muted)}.cta{display:flex;gap:10px;justify-content:center;margin-top:12px}
+.btn{background:linear-gradient(90deg,var(--green),#2b7a4a);color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(47,107,63,0.12)}
+.btn.ghost{background:transparent;border:2px solid var(--gold);color:var(--deep);font-weight:700}.btn.alt{background:linear-gradient(90deg,var(--red),#d14141)}
+.small-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tile{display:block;padding:12px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);text-decoration:none;color:var(--deep);border:1px solid rgba(0,0,0,0.03);font-weight:700}.tile span{display:block;font-weight:600;color:var(--muted);font-size:13px;margin-top:6px}
+.feed{margin-top:8px}.posts{display:flex;flex-direction:column;gap:12px}.post{padding:12px;border-radius:12px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.03)}
+.post .meta{display:flex;align-items:center;gap:10px;margin-bottom:8px}.post .meta .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(90deg,var(--gold),var(--green));display:inline-block}.post p{margin:6px 0}.post img,.post video{width:100%;border-radius:8px;display:block}
+.actions{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}.actions button{background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:700}.actions button.like{color:var(--red);border-color:rgba(178,34,34,0.12)}.actions button.comment{color:var(--green);border-color:rgba(47,107,63,0.08)}.actions button.share{color:var(--deep);border-color:rgba(107,63,36,0.06)}
+.form-card input[type="text"], .form-card input[type="email"], .form-card input[type="password"], .form-card textarea, .form-card select, input[type="file"], #postText{width:100%;padding:12px;margin-top:8px;border-radius:10px;border:1px solid #eee;font-size:15px;background:#fff}.form-card label{font-weight:700;margin-top:8px;display:block;color:var(--deep)}
+.small{font-size:13px}.muted.small{color:var(--muted);font-size:13px}nav{display:flex;gap:12px;align-items:center}nav a{color:var(--deep);text-decoration:none;font-weight:700;padding:6px 8px;border-radius:8px}nav a:hover{background:rgba(0,0,0,0.03)}.bottom-nav{display:none}footer{padding:12px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:760px){.container{padding:10px}.small-grid{grid-template-columns:1fr}.bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid rgba(0,0,0,0.06);justify-content:space-around;padding:8px;z-index:40}.bottom-nav a{display:inline-block;color:var(--muted);text-decoration:none;font-weight:700}.bottom-nav a.active{color:var(--green)}footer{position:fixed;bottom:56px;left:0;right:0}.hero .hero-media{height:160px}.post .meta .avatar{width:36px;height:36px}}
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    color: #222;
+}
+
+.top-header {
+    background: #3B49DF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-box {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery img {
+    width: 30%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.button {
+    background: #252c76;
+    color: rgb(70, 85, 92);
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 6px;
+    text-decoration: none;
+}
+body {
+  background-image: url('images/icon.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero {
+  background-image: url('images/WhatsApp Image 2025-11-13 at 12.07.24 AM (1).jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}

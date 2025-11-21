@@ -1,0 +1,12 @@
+{
+  "name": "Bredi Nkz – Kwagyei Kurom",
+  "short_name": "BrediNKZ",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff8ef",
+  "theme_color": "#2f6b3f",
+  "icons": [
+    { "src": "lion-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "lion-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
